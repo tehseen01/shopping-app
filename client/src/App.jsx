@@ -6,7 +6,7 @@ const Navbar = lazy(() => import("./components/navbar/Navbar"));
 import Footer from "./components/footer/Footer";
 import SingleProduct from "./pages/singleProduct/SingleProduct";
 const Cart = lazy(() => import("./pages/cart/Cart"));
-import Wishlist from "./pages/wishlist/WishList";
+import Wishlist from "./pages/wishlist/Wishlist";
 import Checkout from "./pages/checkout/Checkout";
 import Login from "./pages/account/Login";
 import Loader from "./components/loader";
