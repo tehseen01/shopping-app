@@ -1,0 +1,23 @@
+@import "../../config";
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  button {
+    border: 1px solid $gray-500;
+    border-radius: 50%;
+    @extend .center;
+    width: 25px;
+    height: 25px;
+  }
+
+  span {
+    width: 2.5rem;
+    display: flex;
+    justify-content: center;
+    border: 1px solid $gray-500;
+    height: 26px;
+  }
+}

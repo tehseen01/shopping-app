@@ -1,0 +1,215 @@
+@import "../../config";
+
+.checkout {
+  width: 90vw;
+  margin: 1rem auto;
+  @extend .flexColumn;
+  border: 1px solid $gray-100;
+  border-radius: $radius-lg;
+  overflow: hidden;
+
+  @include medium {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .checkoutTitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: $dark-light;
+    margin-bottom: 0.5rem;
+  }
+
+  .toggleCheckout {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    @include medium {
+      display: none;
+    }
+
+    .toggleHide {
+      display: flex;
+      gap: 1rem;
+
+      .locationIcon {
+        background-color: $gray-200;
+        padding: 1rem;
+        display: flex;
+        font-size: 1.2rem;
+        border-radius: $radius-lg;
+      }
+      p {
+        font-weight: 600;
+
+        span {
+          display: block;
+          font-weight: 400;
+          color: $clr-grey-10;
+        }
+      }
+    }
+
+    .toggleBtnCheckout {
+      transform: rotate(180deg);
+      transition: $transition;
+      width: 2rem;
+      height: 2rem;
+
+      &.rotate {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  .checkoutLeft,
+  .checkoutRight {
+    width: 100%;
+    padding: 0.8rem;
+
+    @include medium {
+      padding: 1.5rem 2rem;
+    }
+  }
+
+  .checkoutLeft {
+    .deliveryInformation {
+      margin-bottom: 1rem;
+      display: none;
+
+      &.show {
+        display: block;
+      }
+
+      @include medium {
+        display: block;
+      }
+
+      form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+
+        input {
+          width: 100%;
+          padding: 0.5rem;
+          outline: none;
+          border: 1px solid $platinum;
+
+          &:focus-visible {
+            border: 1px solid $dark-light;
+          }
+        }
+
+        :last-child {
+          grid-area: 4/1/5/3;
+        }
+      }
+    }
+
+    .paymentMethod {
+      @extend .spaceBetween;
+      display: none;
+
+      &.showPayment {
+        display: flex;
+      }
+
+      label {
+        @extend .center;
+        gap: 1rem;
+      }
+
+      @include medium {
+        display: flex;
+      }
+    }
+  }
+
+  .checkoutRight {
+    background-color: $gray-100;
+
+    .checkoutItem {
+      .item {
+        @extend .spaceBetween;
+        gap: 1rem;
+        padding: 1rem 0;
+        border-bottom: $border-gray-200;
+
+        .itemLeft {
+          display: flex;
+          gap: 0.8rem;
+
+          .itemInfo {
+            .title {
+              font-weight: 700;
+              font-size: $text-sm;
+            }
+
+            .itemBrand {
+              color: $gray-500;
+              font-weight: 500;
+              font-size: $text-sm;
+              text-transform: capitalize;
+            }
+          }
+
+          figure {
+            height: 5rem;
+            background-color: $gray-100;
+            width: 5rem;
+            border-radius: $radius;
+
+            img {
+              filter: brightness(0.95);
+            }
+          }
+        }
+
+        .itemRight {
+          @extend .betweenColumn;
+          align-items: end;
+
+          .removeBtn {
+            color: $gray-500;
+            transition: $transition;
+            scale: 1.1;
+
+            &:hover {
+              color: red;
+              scale: 1.3;
+            }
+          }
+        }
+      }
+
+      .priceSummery {
+        margin-top: 1.5rem;
+
+        li {
+          @extend .spaceBetween;
+          padding: 0.2rem 0;
+
+          span {
+            font-size: $text-sm;
+            color: $gray-500;
+            font-weight: 500;
+          }
+
+          p {
+            font-size: $text-sm;
+            font-weight: 700;
+            color: $gray-900;
+          }
+        }
+
+        .confirmOrder {
+          background-color: $blue;
+          color: $white;
+          padding: 0.5rem 0.8rem;
+        }
+      }
+    }
+  }
+}

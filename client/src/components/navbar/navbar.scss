@@ -1,0 +1,124 @@
+@import "../.././config";
+
+header {
+  padding: 0.5rem 0;
+  background-color: $white;
+  position: relative;
+  border-bottom: 1px solid $light;
+
+  @include medium {
+    padding: 0.6rem 0;
+    display: block;
+  }
+
+  .nav-container {
+    max-width: 90vw;
+    margin: auto;
+    @extend .flexCenter;
+    gap: 1rem;
+
+    @include medium {
+      max-width: 95vw;
+    }
+  }
+
+  .logo {
+    text-transform: capitalize;
+    display: block;
+    flex: 2;
+
+    @include medium {
+      display: block;
+    }
+
+    h1 {
+      color: $dark;
+    }
+  }
+}
+
+.navCenter {
+  display: none;
+  color: $dark;
+
+  @include medium {
+    display: flex;
+  }
+
+  ul {
+    @extend .center;
+    gap: 1rem;
+    text-transform: capitalize;
+
+    .categoryLi {
+      position: relative;
+
+      .categoryDropdown {
+        background-color: $white;
+        position: absolute;
+        top: 2rem;
+        left: 0;
+        z-index: 99;
+        width: 13rem;
+        padding: 0.5rem;
+        transition: $transition;
+
+        button {
+          text-transform: capitalize;
+          margin-bottom: 0.3rem;
+        }
+      }
+
+      button {
+        color: $dark;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        width: 100%;
+
+        .rotateArrow {
+          transform: rotate(-90deg);
+          margin-left: 0.5rem;
+          flex: 1;
+          transition: $transition;
+        }
+      }
+    }
+
+    a {
+      color: $dark;
+    }
+  }
+}
+
+.accountCart {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.2rem;
+
+  .account,
+  .cart,
+  .wishlist {
+    color: $dark;
+    position: relative;
+    display: none;
+
+    @include medium {
+      display: block;
+    }
+    span {
+      position: absolute;
+      top: -0.6rem;
+      right: -0.5rem;
+      background-color: $light;
+      color: $dark-light;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      padding: 0.2rem;
+      width: 1.3rem;
+      height: 1.3rem;
+      @extend .center;
+      pointer-events: none;
+    }
+  }
+}

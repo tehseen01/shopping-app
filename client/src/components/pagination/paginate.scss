@@ -1,0 +1,27 @@
+@import "../../config";
+
+.pagination {
+  @extend .center;
+  gap: 1rem;
+  margin: 1rem 0;
+
+  button {
+    padding: 0.5rem 0.8rem;
+    border: $border-gray-200;
+    border-radius: $radius;
+    text-transform: uppercase;
+
+    &:hover:not(:disabled) {
+      background-color: $gray-500;
+      color: white;
+    }
+
+    &:disabled {
+      background-color: $gray-100;
+    }
+  }
+
+  .pagination__selected {
+    background-color: $gray-200;
+  }
+}

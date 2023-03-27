@@ -1,0 +1,44 @@
+@import "../.././config";
+
+.footer {
+  background-color: $gunmetal;
+  color: $platinum;
+  margin-top: auto;
+  padding: 1rem 2.5rem 5rem;
+
+  .footerLogo {
+    font-size: $text-lg;
+    font-weight: 500;
+    color: white;
+  }
+
+  @include medium {
+    padding: 4rem 2.5rem 2rem;
+  }
+
+  .top {
+    display: grid;
+    gap: 1rem;
+
+    .footerSocialLink {
+      @extend .flexCenter;
+      gap: 1rem;
+    }
+
+    ul {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+
+  hr {
+    margin: 1rem 0;
+  }
+  .bottom {
+    .left {
+      .copyright {
+        color: $platinum;
+      }
+    }
+  }
+}

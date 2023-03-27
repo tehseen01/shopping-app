@@ -1,0 +1,16 @@
+export { default as div1 } from "../images/div1.png";
+export { default as div2 } from "../images/div2.png";
+export { default as div3 } from "../images/div3.png";
+export { default as div4 } from "../images/div4.png";
+export { default as slide1 } from "../images/miTv.png";
+export { default as slide2 } from "../images/watches.jpg";
+export { default as slide3 } from "../images/headphone.png";
+export { default as show1 } from "../images/show1.png";
+// export { default as show2 } from "../images/watchshow.png";
+export { default as show3 } from "../images/show3.png";
+export { default as show4 } from "../images/show4.png";
+export { default as show5 } from "../images/show5.png";
+export { default as show6 } from "../images/show6.png";
+export { default as show7 } from "../images/show7.png";
+export { default as slide4 } from "../images/miTv.png";
+export { default as slide5 } from "../images/headphone.png";

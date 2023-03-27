@@ -1,0 +1,122 @@
+@import "../../config";
+
+.productsPage {
+  width: 95vw;
+  margin: auto;
+
+  @include medium {
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 3rem auto;
+    gap: 1rem;
+    grid-template-areas: "filter sort" "filter products";
+  }
+
+  .filterSec {
+    grid-area: filter;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+    min-height: 100vh;
+    background-color: $white;
+    display: none;
+
+    @include medium {
+      position: relative;
+      display: block;
+    }
+
+    .filterTop {
+      background-color: $dark-black;
+      @extend .spaceBetween;
+      color: white;
+      padding: 0.5rem;
+
+      @include medium {
+        display: none;
+      }
+
+      .filterBack {
+        @extend .center;
+        button {
+          color: $white;
+          font-size: 1.8rem;
+          display: flex;
+          margin-right: 0.8rem;
+        }
+      }
+
+      .clearFilter {
+        button {
+          color: white;
+        }
+      }
+    }
+
+    &.openFilter {
+      display: block;
+    }
+  }
+
+  .sortSection {
+    grid-area: sort;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+
+    @include medium {
+      margin: 0;
+      border-radius: $radius-lg;
+      border: $border-gray-200;
+    }
+
+    .filterBtn {
+      border-right: 1px solid $platinum;
+      width: 100%;
+      @extend .center;
+      gap: 0.5rem;
+
+      @include medium {
+        display: none;
+      }
+    }
+
+    .sortBtn {
+      width: 100%;
+      @extend .center;
+      gap: 0.5rem;
+    }
+
+    .productsCount {
+      display: none;
+
+      @include medium {
+        display: block;
+      }
+    }
+  }
+
+  .products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+    gap: 0.6rem;
+    position: relative;
+    justify-items: center;
+
+    @include medium {
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    }
+  }
+}
+
+.centerLoading {
+  @extend .center;
+  font-size: 2rem;
+  color: $gray-900;
+  text-transform: capitalize;
+}

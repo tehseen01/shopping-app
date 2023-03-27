@@ -1,0 +1,61 @@
+@import "../../config";
+
+.filterItem {
+  text-transform: capitalize;
+  margin: auto;
+
+  .filter {
+    padding: 1rem;
+
+    @include medium {
+      border-radius: $radius-lg;
+      border: $border-gray-200;
+    }
+    .filterTitle {
+      font-weight: 700;
+      color: $gray-800;
+    }
+  }
+
+  .categoryFilter {
+    @extend .columnStart;
+    gap: 0.2rem;
+
+    button {
+      text-transform: capitalize;
+      color: $gray-800;
+      width: 100%;
+      text-align: start;
+
+      &:hover {
+        background-color: $gray-100;
+      }
+
+      &.activeCategory {
+        background-color: $gray-200;
+      }
+    }
+  }
+
+  .companyFilter {
+    margin-top: 0.8rem;
+
+    .companyFilterItem {
+      @extend .spaceBetween;
+      gap: 0.5rem;
+
+      :hover {
+        background-color: $gray-200;
+      }
+
+      label {
+        color: $gray-800;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .priceFilter {
+    margin-top: 0.8rem;
+  }
+}

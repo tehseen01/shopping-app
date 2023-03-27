@@ -1,0 +1,68 @@
+@import "../.././config";
+
+.setQuantityBox {
+  @extend .flexCenter;
+  gap: 2rem;
+
+  .stock {
+    span {
+      color: $dark-red;
+    }
+  }
+}
+
+.quantityBtn {
+  @extend .centerBetween;
+  background-color: #f0f0f0;
+  width: 8rem;
+  border-radius: 20px;
+  height: 2.5rem;
+  overflow: hidden;
+
+  button {
+    outline: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 1rem;
+    background-color: $light;
+  }
+
+  .incBtn {
+    border-left: 1px solid white;
+  }
+
+  .decBtn {
+    border-right: 1px solid $white;
+  }
+}
+
+.cartBuy {
+  @extend .flexCenter;
+  gap: 1rem;
+  margin: 1rem 0;
+
+  @include medium {
+    gap: 2rem;
+  }
+
+  .addToCart,
+  .buyNow {
+    border-radius: 10px;
+    padding: 0.8rem 1.5rem;
+    text-transform: capitalize;
+    font-size: 1rem;
+    @extend .flexCenter;
+    gap: 0.5rem;
+    cursor: pointer;
+  }
+
+  .addToCart {
+    background-color: $dark-red;
+    color: white;
+  }
+
+  .buyNow {
+    border: 1px solid $dark;
+  }
+}

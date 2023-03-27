@@ -1,0 +1,118 @@
+@import "../.././config";
+
+.slider-container {
+  background-color: $white;
+
+  .slider {
+    overflow: hidden;
+    position: relative;
+    height: 12rem;
+
+    @include medium {
+      height: 24rem;
+    }
+
+    .slideContent {
+      position: absolute;
+      left: 10vw;
+      top: 50%;
+      transform: translate(0, -50%);
+      width: 50vw;
+      text-transform: capitalize;
+
+      @include medium {
+        width: 35vw;
+        top: 40%;
+        transform: translate(0, -60%);
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        line-height: 1;
+
+        @include medium {
+          font-size: 2.5rem;
+        }
+      }
+
+      .span {
+        margin: 0.5rem 0;
+
+        @include medium {
+          font-size: 1.5rem;
+        }
+      }
+
+      .price {
+        font-weight: 600;
+        font-size: 1rem;
+
+        @include medium {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+.mySlide {
+  padding: 0;
+  height: 100%;
+
+  &:hover {
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: block;
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translate(-50%, 0);
+    z-index: 9;
+    background-color: white;
+    filter: invert(1);
+    border-radius: $radius-xl;
+    cursor: pointer;
+    display: none;
+  }
+
+  .swiper-button-prev {
+    left: 2rem;
+    background-image: url("../../assets/less-than-symbol.png");
+  }
+  .swiper-button-next {
+    right: 0;
+    background-image: url("../../assets/greater-than-symbol.png");
+  }
+
+  .swiper-button-disabled {
+    opacity: 0.2;
+  }
+
+  .swiper-pagination {
+    .swiper-pagination-bullet {
+      margin: 0 !important;
+      border-radius: 0 !important;
+      width: 1rem;
+      height: 2px;
+      background: black;
+    }
+  }
+}
+
+.sliderSlide {
+  figure {
+    height: 100%;
+    img {
+      object-fit: cover;
+    }
+  }
+}

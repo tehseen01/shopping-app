@@ -1,0 +1,60 @@
+@import "../.././config";
+
+.wishlistContainer {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  width: 90vw;
+  margin: 2rem auto;
+
+  .wishlistItem {
+    position: relative;
+
+    @include medium {
+      width: 196px;
+    }
+
+    .wishlistContent {
+      box-shadow: $shadow;
+      padding: 0.5rem;
+      border-radius: $radius;
+      height: 250px;
+
+      .wishlistPrice {
+        @extend .spaceBetween;
+
+        p {
+          font-weight: 500;
+        }
+
+        del {
+          color: $dark-light;
+        }
+      }
+
+      figure {
+        height: 10rem;
+        padding: 0.5rem;
+
+        img {
+          object-fit: scale-down;
+        }
+      }
+    }
+
+    .removeWishlist {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+    }
+  }
+}
+
+.wishlistEmpty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  font-size: 2rem;
+  color: $dark;
+}

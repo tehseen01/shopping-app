@@ -1,0 +1,40 @@
+@import "../../config";
+
+.homeCatContainer {
+  width: 95vw;
+  margin: 1rem auto;
+}
+
+.categoryGrid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 150px;
+  border-radius: $radius-xl;
+  padding: 0.8rem;
+  background-color: $light-gray;
+  transition: $transition;
+  text-align: center;
+
+  &:hover {
+    scale: 1.05;
+  }
+
+  p {
+    font-weight: 500;
+    text-transform: capitalize;
+    color: $dark;
+  }
+
+  figure {
+    width: 50%;
+    img {
+      filter: brightness(0.95);
+    }
+  }
+}
+
+.categorySwiper {
+  padding: 1rem 0.5rem;
+}

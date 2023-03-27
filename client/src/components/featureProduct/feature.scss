@@ -1,0 +1,30 @@
+@import "../.././config";
+
+.featureProduct {
+  max-width: 95vw;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+
+  @include medium {
+    max-width: 95vw;
+  }
+
+  .featureHeading {
+    @extend .spaceBetween;
+    position: absolute;
+    top: 0;
+  }
+
+  .featureContainer {
+    display: flex;
+    width: 100%;
+    margin: 1rem 0;
+    gap: 0.8rem;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+.activeHeart {
+  color: red;
+}

@@ -1,0 +1,42 @@
+@import "../../_config.scss";
+
+.serviceSection {
+  max-width: 90vw;
+  margin: auto;
+  display: none;
+
+  @include medium {
+    display: block;
+  }
+
+  ul {
+    @extend .spaceBetween;
+    margin: 2.5rem 0;
+
+    li {
+      display: grid;
+      grid-template-columns: 2rem 1fr;
+      grid-template-areas: "svg p" "svg span";
+      gap: 0 0.5rem;
+
+      svg {
+        grid-area: svg;
+        justify-self: center;
+        align-self: center;
+        font-size: 1.8rem;
+      }
+
+      p {
+        grid-area: p;
+        font-size: 0.8rem;
+        font-weight: 700;
+      }
+
+      span {
+        grid-area: span;
+        font-size: 0.8rem;
+        color: $dark;
+      }
+    }
+  }
+}

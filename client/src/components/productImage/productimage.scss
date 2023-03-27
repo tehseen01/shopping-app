@@ -1,0 +1,109 @@
+@import "../.././config";
+
+.imgSlideBox {
+  display: none;
+
+  @include medium {
+    display: block;
+  }
+
+  .imgSlide {
+    overflow: hidden;
+    height: 395px;
+    width: 4rem;
+  }
+  .imgDown,
+  .imgUp {
+    width: 100%;
+    height: 1.2rem;
+    @extend .center;
+    font-size: 2rem;
+    border: 1px solid $light;
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .imgDown {
+    margin-top: 0.5rem;
+  }
+
+  .imgUp {
+    margin-bottom: 0.5rem;
+
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.listImg {
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s ease-in-out;
+
+  figure {
+    width: 4rem;
+    height: 4rem;
+    border: 1px solid $light;
+
+    &.active {
+      border: 2px solid $dark-red;
+    }
+  }
+
+  img {
+    cursor: pointer;
+    object-fit: scale-down;
+  }
+}
+
+.singleImg {
+  height: 450px;
+  width: 100%;
+  border: 1px solid $light;
+  display: none;
+
+  @include medium {
+    display: block;
+  }
+
+  figure {
+    height: 100%;
+
+    img {
+      object-fit: scale-down;
+    }
+  }
+}
+
+.mySwiper {
+  height: 22rem;
+  transition: $transition;
+
+  .swiper-pagination {
+    .swiper-pagination-bullet {
+      margin: 0 !important;
+      border-radius: 0 !important;
+      width: 1rem;
+      height: 2px;
+      background: black;
+    }
+  }
+
+  @include medium {
+    display: none !important;
+  }
+
+  figure {
+    height: 20rem;
+
+    img {
+      object-fit: scale-down;
+    }
+  }
+}

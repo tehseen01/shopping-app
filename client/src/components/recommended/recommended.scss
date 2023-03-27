@@ -1,0 +1,12 @@
+@import "../../config";
+
+.recommended {
+  margin: 1rem 0;
+
+  .recomTitle {
+    p {
+      font-weight: 500;
+      font-size: 1.6rem;
+    }
+  }
+}
