@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import "./singleProduct.scss";
 import ProductImage from "../../components/productImage/ProductImage";
 import PriceFormat from "../../components/helper/PriceFormat";
-import AddToCart from "../../components/addToCart/addToCart";
+import AddToCart from "../../components/addToCart/AddToCart";
 import { singleFetch } from "../../hooks/useFetch";
 import { useDispatch, useSelector } from "react-redux";
 import Recommended from "../../components/recommended/Recommended";
