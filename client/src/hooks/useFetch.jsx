@@ -17,7 +17,7 @@ export const featureData = createAsyncThunk("feature/fetch", async (url) => {
 });
 
 export const singleFetch = createAsyncThunk("single/fetch", async (url) => {
-  const res = await axios.get(url);
+  const res = await axios.get(import.meta.env.VITE_API_URL + url);
   const data = await res.data;
   return data;
 });

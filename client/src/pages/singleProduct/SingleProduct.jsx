@@ -22,7 +22,7 @@ const SingleProduct = () => {
   const [readMore, setReadMore] = useState(false);
 
   useEffect(() => {
-    dispatch(singleFetch(`http://localhost:8080/products/${id}`));
+    dispatch(singleFetch(`/${id}`));
   }, [dispatch]);
 
   if (status === STATUSES.LOADING) {
